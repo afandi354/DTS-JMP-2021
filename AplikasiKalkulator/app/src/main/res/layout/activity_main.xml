@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtJudul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/tvJudul"
+        android:textAlignment="center"
+        android:textStyle="normal|bold"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"/>
+
+    <EditText
+        android:id="@+id/angka_pertama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:hint="@string/masukan_angka_pertama"
+        android:textSize="14sp"
+        android:layout_below="@+id/txtJudul"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="22dp"
+        android:importantForAutofill="no" />
+
+    <EditText
+        android:id="@+id/angka_kedua"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:ems="10"
+        android:hint="@string/masukan_angka_kedua"
+        android:textSize="14sp"
+        android:layout_below="@+id/angka_pertama"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="8dp"
+        android:importantForAutofill="no" />
+
+    <Button
+        android:id="@+id/btnTambah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/plus"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/angka_kedua"
+        android:layout_marginTop="16dp"/>
+
+    <Button
+        android:id="@+id/btnKurang"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/min"
+        android:layout_marginStart="8dp"
+        android:layout_alignBaseline="@id/btnTambah"
+        android:layout_alignBottom="@+id/btnTambah"
+        android:layout_toEndOf="@id/btnTambah"/>
+
+    <Button
+        android:id="@+id/btnBagi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bagi"
+        android:layout_above="@+id/btnClear"
+        android:layout_below="@+id/angka_kedua"
+        android:layout_marginTop="16dp"
+        android:layout_alignParentEnd="true"/>
+
+    <Button
+        android:id="@+id/btnKali"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@id/btnBagi"
+        android:layout_alignBottom="@+id/btnBagi"
+        android:layout_toStartOf="@id/btnBagi"
+        android:layout_marginEnd="8dp"
+        android:text="@string/kali" />
+
+    <Button
+        android:id="@+id/btnClear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/bersihkan"
+        android:layout_below="@+id/btnTambah"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"/>
+
+    <TextView
+        android:id="@+id/tvHasil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hasil"
+        android:textSize="24sp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/btnClear"
+        android:layout_marginTop="35dp"/>
+
+    <TextView
+        android:id="@+id/tvNilai"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/nilai"
+        android:textSize="36sp"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textStyle="normal|bold"
+        android:layout_below="@+id/tvHasil"
+        android:layout_marginTop="8dp"/>
+
+</RelativeLayout>
